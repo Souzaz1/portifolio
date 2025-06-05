@@ -46,24 +46,21 @@ const Index = () => {
       description: "Sistema completo para gerenciamento de clínicas de podologia desenvolvido em Java",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
       technologies: ["Java", "MySQL", "HTML", "CSS"],
-      github: "https://github.com/Souzaz1/podologia_sistema_pi.git",
-      demo: "#"
+      github: "https://github.com/Souzaz1/podologia_sistema_pi.git"
     },
     {
       title: "Sistema de Cinema - Spring MVC",
       description: "Aplicação web para gerenciamento de cinema utilizando Spring MVC",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
       technologies: ["Java", "Spring MVC", "MySQL", "HTML"],
-      github: "https://github.com/Souzaz1/AtividadeCinemaSpringMVC.git",
-      demo: "#"
+      github: "https://github.com/Souzaz1/AtividadeCinemaSpringMVC.git"
     },
     {
       title: "Sistema de Leilões",
       description: "Plataforma de leilões online desenvolvida em Java com interface web",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       technologies: ["Java", "MySQL", "HTML", "CSS"],
-      github: "https://github.com/Souzaz1/leiloes_uc11.git",
-      demo: "#"
+      github: "https://github.com/Souzaz1/leiloes_uc11.git"
     }
   ];
 
@@ -245,13 +242,6 @@ const Index = () => {
                     >
                       <Github className="w-4 h-4 mr-1" />
                       Code
-                    </a>
-                    <a 
-                      href={project.demo} 
-                      className="flex items-center text-gray-400 hover:text-white transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-1" />
-                      Demo
                     </a>
                   </div>
                 </CardContent>
