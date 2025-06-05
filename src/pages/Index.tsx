@@ -146,19 +146,6 @@ const Index = () => {
               >
                 Ver Projetos
               </Button>
-              <Button 
-                variant="outline" 
-                className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white bg-gray-900 px-8 py-3"
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = 'file:///C:/Users/Gabriel/Downloads/Curriculo.pdf';
-                  link.target = '_blank';
-                  link.click();
-                }}
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download CV
-              </Button>
             </div>
             <div className="flex justify-center space-x-6">
               <a href="https://github.com/Souzaz1" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
