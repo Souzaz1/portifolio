@@ -149,7 +149,12 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white bg-gray-900 px-8 py-3"
-                onClick={() => window.open('file:///C:/Users/Gabriel/Downloads/Curriculo.pdf', '_blank')}
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = 'file:///C:/Users/Gabriel/Downloads/Curriculo.pdf';
+                  link.target = '_blank';
+                  link.click();
+                }}
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download CV
