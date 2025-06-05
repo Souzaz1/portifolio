@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Code, Palette, Database, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -85,8 +84,9 @@ const Index = () => {
       }`}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-xl font-bold text-white">
-              {"<Gabriel />"}
+            <div className="text-xl font-bold text-white flex items-center">
+              <Code className="w-6 h-6 mr-2" />
+              {"Gabriel"}
             </div>
             <div className="hidden md:flex space-x-8">
               {['home', 'about', 'portfolio', 'skills', 'contact'].map((section) => (
@@ -118,6 +118,16 @@ const Index = () => {
                 src="/lovable-uploads/e462db5b-d00b-4f79-8260-599639a995d8.png" 
                 alt="Gabriel Pereira" 
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  console.log('Erro ao carregar imagem:', e);
+                  // Fallback para um ícone se a imagem não carregar
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = '<div class="w-full h-full bg-gray-700 flex items-center justify-center"><svg class="w-16 h-16 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.1 3.89 23 5 23H19C20.1 23 21 22.1 21 21V9H21ZM19 21H5V3H13V9H19V21Z"/></svg></div>';
+                  }
+                }}
               />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
